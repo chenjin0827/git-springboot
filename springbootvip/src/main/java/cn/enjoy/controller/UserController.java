@@ -21,10 +21,12 @@ public class UserController {
     private IUserService iUserService;
 
     @RequestMapping("/hello")
-    String sayHello() {
+    public String sayHello() {
         logger.info("sayHello日志info记录");
         return "hello";
     }
+
+
 
     @RequestMapping("/login")
     public String login(String username, String passwd) {

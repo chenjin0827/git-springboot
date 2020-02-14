@@ -14,13 +14,15 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 
-
 @Aspect
 @Component
 public class WebLogAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
 
+    /**
+     * 切面对应要切的方法必须是public的，否则进不去
+     */
     @Pointcut("execution(public * cn.enjoy.controller.*.*(..))")
     public void webLog() {
     }
