@@ -15,6 +15,10 @@ public class RabbitmqTest {
     @Resource
     private Sender sender;
 
+    /**
+     * 报错的话设置下vhost为 /的权限
+     * @throws Exception
+     */
     @Test
     public void testRabbitmq() throws Exception {
         sender.send();
