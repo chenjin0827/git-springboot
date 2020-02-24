@@ -23,7 +23,7 @@ public class OrderServiceImpl  implements IOrderService{
     @Transactional
     public void addOrder(Orders orders, Users users) {
         usersMapper.insertSelective(users);
-        int i = 10/0;
+//        int i = 10/0;
         ordersMapper.insertSelective(orders);
     }
 }
